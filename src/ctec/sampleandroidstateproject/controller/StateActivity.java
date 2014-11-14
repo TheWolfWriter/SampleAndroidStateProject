@@ -9,13 +9,29 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-
+/**
+ * The state activity for the controller class.
+ * @author S. McKell Nichols
+ * @version 1.0
+ */
 public class StateActivity extends Activity
 {
+	/**
+	 * Text fields for the class.
+	 */
 	private EditText ageField, nameField, phraseField, stuffField;
+	/**
+	 * Button used to switch between screens.
+	 */
 	private Button changeButton;
+	/**
+	 * Creates the appState for the class.
+	 */
 	private AndroidAppState appState;
 	
+	/**
+	 * onCreate method. Initializes the method and calls the different components - text fields, button, and appState.
+	 */
 	@Override
 	protected void onCreate(Bundle savedInstanceState)
 	{
@@ -33,6 +49,10 @@ public class StateActivity extends Activity
 		setupListeners();
 	}
 	
+	/**
+	 * Place to set up and keep the listeners of the project.
+	 * In this case, there is only one button as of yet to switch between screens.
+	 */
 	private void setupListeners()
 	{
 		changeButton.setOnClickListener(new View.OnClickListener()

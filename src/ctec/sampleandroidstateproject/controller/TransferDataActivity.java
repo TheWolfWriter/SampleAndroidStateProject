@@ -9,13 +9,30 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-
+/**
+ * Transfer data class for the controller.
+ * @author S. McKell Nichols
+ * @version 1.0
+ */
 public class TransferDataActivity extends Activity
 {
+	/**
+	 * Calls the appState for the class.
+	 */
 	private AndroidAppState appState;
+	/**
+	 * Provides the text that will be used to display info inserted on the first screen by the user.
+	 */
 	private TextView comboText;
+	/**
+	 * Button that returns the user to the home page.
+	 */
 	private Button homeButton;
 	
+	/**
+	 * onCreate method. Initalizes the method and calls components - appState, text view, and button.
+	 * Also calls the listeners.
+	 */
 	@Override
 	protected void onCreate(Bundle savedInstanceState)
 	{
@@ -31,6 +48,10 @@ public class TransferDataActivity extends Activity
 		setupListeners();
 	}
 	
+	/**
+	 * Method that creates the listeners for the class.
+	 * In this case there is only one button that returns the user home.
+	 */
 	private void setupListeners()
 	{
 		homeButton.setOnClickListener(new View.OnClickListener()
